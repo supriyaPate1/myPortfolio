@@ -1,15 +1,21 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 * {
   margin: 0;
   padding: 0;
-  font-family: "Poppins", sans-serif;
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
   box-sizing: border-box;
+}
+html{
+  scroll-behavior: smooth;
 }
 body {
   background-color: #080808;
-  color: #ffffff;
+  color: #fff;
 }
 #header {
-  border: 1px solid red;
   width: 100%;
   height: 100vh;
   background-image: url(assets/imageWorkingMe.png);
@@ -17,7 +23,7 @@ body {
   background-position: center;
 }
 .container {
-  padding: 10px 10px;
+  padding: 10px 8%;
 }
 nav {
   display: flex;
@@ -43,7 +49,7 @@ nav ul li a::after {
   content: "";
   width: 0%;
   height: 3px;
-  background: #ff004f;
+  background:#6e41b7;
   position: absolute;
   left: 0;
   bottom: -6px;
@@ -52,15 +58,24 @@ nav ul li a:hover::after {
   width: 100%;
 }
 .header-text {
-  margin-top: 20%;
+  margin-top: 15%;
   font-size: 30px;
 }
-.heaer-text h1 {
+.header-text h1 {
   font-size: 60px;
   margin-top: 20px;
 }
-.heaer-text span {
-  color: #ff004f;
+.header-text span {
+  color: #6e41b7;
+}
+.header-title{
+  color: white;
+  font-size: 25px;
+}
+.intro{
+  margin-top: 13px;
+  font-size: 16px;
+  color: white;
 }
 
 /* .............about................ */
@@ -103,7 +118,7 @@ nav ul li a:hover::after {
   content: "";
   width: 0%;
   height: 3px;
-  background: #ff004f;
+  background:#6e41b7;
   position: absolute;
   left: 0;
   bottom: -8px;
@@ -117,7 +132,8 @@ nav ul li a:hover::after {
   margin: 10px 0px;
 }
 .tab-contents ul li span {
-  color: #b5467b;
+  font-weight: bold;
+  color:#6e41b7;
   font-size: 14px;
 }
 .tab-contents {
@@ -135,8 +151,6 @@ nav ul li a:hover::after {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap: 40px;
   margin-top: 50px;
-  /* transition: background 0.5s, transform 0.5s; */
-
 }
 .services-list div {
   background-color: #262626;
@@ -144,7 +158,7 @@ nav ul li a:hover::after {
   font-size: 13px;
   font-weight: 300;
   border-radius: 10px;
-  /* transition:background 0.5s,transform 0.5s ; */
+  transition: background 0.5s, transform 0.5s;
 }
 .services-list div i {
   font-size: 50px;
@@ -162,9 +176,9 @@ nav ul li a:hover::after {
     margin-top: 20px;
     display: inline-block;
 }
-.services-list div :hover{
-    background-color: #ff004f;
-    /* transform:translateY(-10px) ; */
+.services-list div:hover{
+    background-color:#6e41b7;
+    transform:translateY(-10px) ;
 }
 
 /* .......portfolio................ */
@@ -191,7 +205,7 @@ padding: 50px 0;
 .layer{
     width: 100%;
     height: 0;
-    background:linear-gradient(rgba(0,0,0,0.6),#ff004f) ;
+    background:linear-gradient(rgba(0,0,0,0.6),#6e41b7) ;
     border-radius: 10px;
     position: absolute;
     left: 0;
@@ -210,7 +224,7 @@ padding: 50px 0;
 }
 .layer a{
   margin-top: 20px;
-  color: #ff004f;
+  color:#6e41b7;
   text-decoration: none;
   font-size: 18px;
   line-height: 60px;
@@ -230,13 +244,93 @@ height: 100%
   display: block;
   margin: 50px auto;
   width: fit-content;
-  border: 1px solid #ff004f;
+  border: 1px solid#6e41b7;
   border-radius: 6px;
   padding: 14px 50px;
   text-decoration: none;
   color: #ffff;
-  transition: background 0.4s;
+  transition: background 0.5s;
 }
 .btn:hover{
-background: #ff004f;
+background:#6e41b7;
 }
+
+/* -----------------contact------------ */
+.contact-left{
+  flex-basis: 35%;
+}
+.contact-right{
+  flex-basis: 60%;
+} 
+.contact-left p{
+  margin-top: 30px;
+}
+.contact-left p i{
+  margin-right: 15px;
+  color:#6e41b7;
+  font-size: 25px;
+}
+.social-icons{
+  margin-top: 30px;
+}
+.social-icons a{
+  text-decoration: none;
+  font-size: 30px;
+  margin-right: 15px;
+  color: #ababab;
+  display: inline-block;
+  transition: transform 0.5s;
+}
+.social-icons a:hover{
+ color:#6e41b7;
+ transform: translateY(-5px);
+}
+ .btn2{
+  cursor: pointer;
+  display: inline-block;
+  background:#6e41b7;
+}
+.contact-right form{
+  width: 100%;
+}
+.contact-right h3{
+  margin-top: 10px;
+}
+form{
+ border: 1px solid rgb(50, 49, 49);
+ border-radius: 8px;
+ padding-left: 10px;
+ padding-right: 10px;
+}
+ form input, form textarea{
+  width: 100%;
+  border: 0;
+  outline: none;
+  background: #262626;
+  padding: 15px;
+  margin: 15px 0;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 6px;
+}
+form .btn2{
+  padding: 14px 60px;
+  background-color:#6e41b7;
+  font-size:18px ;
+  margin-top: 20px;
+  cursor: pointer;
+}
+.copyright{
+  width: 100%;
+  text-align: center;
+  padding: 25px 0;
+  background:  #262626;
+  font-weight: 300;
+  margin-top: 20px;
+}
+nav .fa-solid{
+  display: none;
+}
+
+
+

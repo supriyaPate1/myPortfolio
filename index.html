@@ -1,29 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>My portfolio</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="https://kit.fontawesome.com/ef23d8a637.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="query.css" />
+    <script
+      src="https://kit.fontawesome.com/ef23d8a637.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <div id="header">
       <div class="container">
         <nav>
           <img src="assets/myLogo.png" class="logo" alt="logoImg" />
-          <ul>
-            <li><a href="">Home</a></li>
-            <li><a href="">About</a></li>
-            <li><a href="">Services</a></li>
-            <li><a href="">Portfolio</a></li>
-            <li><a href="">Contact</a></li>
-            <!-- <li><a href=""></a></li> -->
+          <ul id="sideMenu">
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">My Work</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <i class="fa-solid fa-circle-xmark" onclick="closeMenu()"></i>
           </ul>
+
+          <i class="fa-solid fa-bars" onclick="openMenu()"></i>
         </nav>
         <div class="header-text">
-          <p>Frontend Developer</p>
           <h1>Hi ! I am <span>Supriya Patel</span></h1>
+          <p class="header-title">Frontend Software Developer/ UI Developer/ React.Js Developer</p>
+          <p class="intro">
+            Dynamic and results-oriented Frontend Software Engineer with a
+            Master's degree in Computer Applications and hands-on experience in
+            developing scalable applications. Skilled in implementing RESTful
+            APIs, optimizing performance, and ensuring clean and readable code.
+          </p>
+        </div>
+        <div class="social-icons">
+          <a href=""><i class="fa-brands fa-linkedin"></i></a>
+          <a href="https://github.com/supriyaPate1/
+          "><i class="fa-brands fa-github"></i></a>
+          <a href=""><i class="fa-brands fa-discord"></i></a>
         </div>
       </div>
     </div>
@@ -37,10 +56,9 @@
           <div class="about-col-2">
             <h2 class="sub-title">About Me</h2>
             <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam
-              corrupti mollitia perspiciatis voluptas, possimus voluptate
-              magnam, magni, quisquam consequuntur culpa omnis porro recusandae
-              atque nostrum natus eos tenetur perferendis quibusdam.
+               A talented frontend developer with a passion for crafting immersive digital experiences. Proficient in HTML, CSS, and JavaScript.
+               I am adept at translating design concepts into responsive, user-friendly interfaces. Whether it's building interactive websites, optimizing performance, or troubleshooting bugs, 
+               I am dedicated to delivering polished frontend solutions that elevate the digital landscape.
             </p>
             <div class="tab-titles">
               <p class="tab-links active-link" onclick="openTab('skills')">
@@ -54,105 +72,216 @@
             <div class="tab-contents active-tab" id="skills">
               <ul>
                 <li>
-                  <span>Frameworks/libraries</span><br />React.Js, MUI, Redux,
-                  Router
+                  <span>Programming Languages</span><br /> Java, JavaScript, TypeScript, HTML, CSS
                 </li>
                 <li>
-                  <span>Languages</span><br />JavaScript, TypeScripy, HTML, CSS,
-                  Java
+                  <span>Libraries/Frameworks</span><br />React.JS, Redux,Router, MUI, Bootstrap, Ant Design
                 </li>
+                <li><span>Databases</span><br />SQL</li>
                 <li><span>Tools</span><br />Git, VS code, Postman, Figma</li>
+                <li><span>Testing</span><br />Unit Testing</li>
                 <li><span>Other</span><br />DSA, Scrum</li>
               </ul>
             </div>
             <div class="tab-contents" id="experience">
               <ul>
-                <li>
+                <li><pre>
                   <span>June 2022- July 2023 </span><br />
-                  Associate Software Engineer at Cedcoss Technologies Pvt Ltd
+                  ASSOCIATE SOFTWARE ENGINEER| CEDCOSS Technologies Pvt Ltd,
+                  Lucknow, UP
+
+                  • Created a Remote Admin Panel using React v18,
+                  achieving 30% performance optimization through implementation
+                  of lazy loading, code splitting, memoization, and debouncing
+                  techniques. 
+
+                  • Implemented RESTful APIs for efficient data
+                  exchange, contributing to enhanced platform functionality. 
+
+                  • Successfully implemented state management using Redux,
+                  ensuring scalability and maintainability of the application. 
+
+                  • Collaborated with cross-functional teams to deliver clean,
+                  readable, and scalable code, meeting project deadlines and
+                  exceeding client expectations.
+
+                  • Conducted comprehensive unit
+                  testing to ensure the reliability and stability of software
+                  components.</pre>
                 </li>
               </ul>
             </div>
             <div class="tab-contents" id="education">
               <ul>
                 <li>
-                  <span>2020-2022</span><br />Master of Computer Application from
-                  Kamla Nehru Institute of Technology, Sultanpur
+                  <span> AUGUST 2020- JUNE 2022</span><br />MASTER OF COMPUTER APPLICATION |
+                  Kamla Nehru Institute of Technology, Sultanpur, Uttar Pradesh, India
                 </li>
 
                 <li>
-                  <span>2017-2020</span><br />Bsc from National PG college, Lucknow
+                  <span> JULY 2017 - JULY 2020</span><br />BACHELORS OF COMPUTER SCIENCE |
+                  National PG College, Lucknow, Uttar Pradesh, India
                 </li>
               </ul>
             </div>
+            <a href="assets/SUPRIYA_P_RESUME.pdf" download class="btn btn2"
+              >Download Resume</a
+            >
           </div>
         </div>
       </div>
     </div>
     <!-- .....services.......... -->
     <div id="services">
+      <div class="container">
+        <h2 class="sub-title">My services</h2>
+        <div class="services-list">
+          <div>
+            <i class="fa-solid fa-code"></i>
+            <h3>UI Development</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni
+              nesciunt eveniet expedita accusantium a unde natus? Necessitatibus
+              recusandae quibusdam labore aliquam vitae laboriosam temporibus
+              quae est omnis, minima veniam voluptas!
+            </p>
+            <a href="#">Learn More</a>
+          </div>
+          <div>
+            <i class="fa-solid fa-crop"></i>
+            <h3>Debugging</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni
+              nesciunt eveniet expedita accusantium a unde natus? Necessitatibus
+              recusandae quibusdam labore aliquam vitae laboriosam temporibus
+              quae est omnis, minima veniam voluptas!
+            </p>
+            <a href="#">Learn More</a>
+          </div>
+          <div>
+            <i class="fa-solid fa-store"></i>
+            <h3>Troubleshooting</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni
+              nesciunt eveniet expedita accusantium a unde natus? Necessitatibus
+              recusandae quibusdam labore aliquam vitae laboriosam temporibus
+              quae est omnis, minima veniam voluptas!
+            </p>
+            <a href="#">Learn More</a>
+          </div>
+          <div>
+            <i class="fa-solid fa-store"></i>
+            <h3>Unit Testing</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni
+              nesciunt eveniet expedita accusantium a unde natus? Necessitatibus
+              recusandae quibusdam labore aliquam vitae laboriosam temporibus
+              quae est omnis, minima veniam voluptas!
+            </p>
+            <a href="#">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <!-- .................portfolio............. -->
+      <div id="portfolio">
         <div class="container">
-            <h2 class="sub-title">
-                My services
-            </h2>
-            <div class="services-list">
-                <div>
-                    <i class="fa-solid fa-code"></i>
-                    <h3>Web Design</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni nesciunt eveniet expedita accusantium a unde natus? Necessitatibus recusandae quibusdam labore aliquam vitae laboriosam temporibus quae est omnis, minima veniam voluptas!</p>
-                    <a href="#">Learn More</a>
-                </div>
-                <div>
-                    <i class="fa-solid fa-crop"></i>
-                    <h3>Web Design</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni nesciunt eveniet expedita accusantium a unde natus? Necessitatibus recusandae quibusdam labore aliquam vitae laboriosam temporibus quae est omnis, minima veniam voluptas!</p>
-                    <a href="#">Learn More</a>
-                </div>
-                <div>
-                    <i class="fa-solid fa-store"></i>
-                    <h3>Web Design</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni nesciunt eveniet expedita accusantium a unde natus? Necessitatibus recusandae quibusdam labore aliquam vitae laboriosam temporibus quae est omnis, minima veniam voluptas!</p>
-                    <a href="#">Learn More</a>
-                </div>
-                  
+          <h2 class="sub-title">My Work</h2>
+          <div class="work-list">
+            <div class="work">
+              <img src="assets/imageWork.png" alt="work1" />
+              <div class="layer">
+                <h4>Sweetrs'</h4>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Consequuntur magni neque odio unde quisquam, dolor impedit
+                  voluptates nobis provident, modi vel odit nostrum optio fugiat
+                  natus tempore? Impedit, incidunt omnis!
+                </p>
+                <a href="#"
+                  ><i class="fa-solid fa-arrow-up-right-from-square"></i
+                ></a>
+              </div>
             </div>
-            
-        </div>
-        <!-- .................portfolio............. -->
-        <div id="portfolio">
-            <div class="container">
-                <h2 class="sub-title">My Work</h2>
-                <div class="work-list">
-                    <div class="work">
-                        <img src="assets/imageWork.png" alt="work1"/>
-                           <div class="layer">
-                            <h4>Sweetrs'</h4>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur magni neque odio unde quisquam, dolor impedit voluptates nobis provident, modi vel odit nostrum optio fugiat natus tempore? Impedit, incidunt omnis!</p>
-                            <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                           </div>
-                    </div>
-                    <div class="work">
-                        <img src="assets/imageWorkingMe.png" alt="work2"/>
-                        <div class="layer">
-                            <h4>Sweetrs'</h4>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur magni neque odio unde quisquam, dolor impedit voluptates nobis provident, modi vel odit nostrum optio fugiat natus tempore? Impedit, incidunt omnis!</p>
-                            <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                           </div>
-                    </div>
-                    <div class="work">
-                        <img src="assets/imageWorkingMe.png" alt="work3"/>
-                        <div class="layer">
-                            <h4>Weather App</h4>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur magni neque odio unde quisquam, dolor impedit voluptates nobis provident, modi vel odit nostrum optio fugiat natus tempore? Impedit, incidunt omnis!</p>
-                            <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                           </div>
-                    </div>
-                </div>
+            <div class="work">
+              <img src="assets/imageWorkingMe.png" alt="work2" />
+              <div class="layer">
+                <h4>Sweetrs'</h4>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Consequuntur magni neque odio unde quisquam, dolor impedit
+                  voluptates nobis provident, modi vel odit nostrum optio fugiat
+                  natus tempore? Impedit, incidunt omnis!
+                </p>
+                <a href="#"
+                  ><i class="fa-solid fa-arrow-up-right-from-square"></i
+                ></a>
+              </div>
             </div>
-            <a href="#" class="btn">See More</a>
+            <div class="work">
+              <img src="assets/imageWorkingMe.png" alt="work3" />
+              <div class="layer">
+                <h4>Weather App</h4>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Consequuntur magni neque odio unde quisquam, dolor impedit
+                  voluptates nobis provident, modi vel odit nostrum optio fugiat
+                  natus tempore? Impedit, incidunt omnis!
+                </p>
+                <a href="#"
+                  ><i class="fa-solid fa-arrow-up-right-from-square"></i
+                ></a>
+              </div>
+            </div>
+          </div>
         </div>
+        <a href="#" class="btn">See More</a>
+      </div>
     </div>
-    <script >
+    <!-- -----------------contact------------ -->
+    <div id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="contact-left">
+            <h1 class="sub-title">Contact Me</h1>
+            <p><i class="fa-solid fa-envelope"></i>supriyapatelbuz@gmail.com</p>
+            <p><i class="fa-solid fa-phone"></i>+91 8115601497</p>
+            <div class="social-icons">
+              <a href=""><i class="fa-brands fa-linkedin"></i></a>
+              <a href=""><i class="fa-brands fa-github"></i></a>
+              <a href=""><i class="fa-brands fa-discord"></i></a>
+            </div>
+          </div>
+          <div class="contact-right">
+            <form action="https://api.web3forms.com/submit" method="POST">
+              <h3>Get in touch</h3>
+              <input
+                type="hidden"
+                name="access_key"
+                value="551e3867-874d-4770-a556-775fa1b06028"
+              />
+              <input type="text" name="Name" placeholder="Your Name" required />
+              <input
+                type="text"
+                name="Name"
+                placeholder="Your Email"
+                required
+              />
+              <textarea
+                name="Message"
+                rows="6"
+                placeholder="Your Message"
+              ></textarea>
+              <button type="submit" class="btn btn2">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>Copyright © Supriya Patel</p>
+      </div>
+    </div>
+
+    <script>
       var tablinks = document.getElementsByClassName("tab-links");
       var tabcontents = document.getElementsByClassName("tab-contents");
 
@@ -163,8 +292,17 @@
         for (tabcontent of tabcontents) {
           tabcontent.classList.remove("active-tab");
         }
-        event.currentTarget.classList.add('active-link');
-        document.getElementById(tabname).classList.add("active-tab")
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+      }
+    </script>
+    <script>
+      let sidemenu = document.getElementById("sideMenu");
+      function openMenu() {
+        sidemenu.style.right = "0";
+      }
+      function closeMenu() {
+        sidemenu.style.right = "-200px";
       }
     </script>
   </body>

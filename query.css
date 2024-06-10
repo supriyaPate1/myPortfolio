@@ -6,6 +6,11 @@
     .header-text {
       margin-top: 40%;
       font-size: 30px;
+    }
+    #sideMenu li:hover{
+      color: #6e41b7;
+      background-color:rgb(48, 3, 64);
+           
     } 
     .intro{
         font-size: 12px;

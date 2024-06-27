@@ -1,5 +1,7 @@
 /* -------------- css small screen------------ */
 @media only screen and (max-width:600px){
+  body{
+  }
     .header-text h1{
       font-size: 30px ;
     } 
